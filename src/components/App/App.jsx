@@ -7,24 +7,48 @@ import axios from 'axios';
 
 
 function App() {
-    //#region ⬇⬇ All state variables & app load below:
+  //#region ⬇⬇ All state variables & app load below:
   // ⬇ State variables:
-  let [studentList, setStudentList] = useState([]);
-  // ⬇ On load, get guests:
+  let [galleryList, setGalleryList] = useState([]);
+
+  // ⬇ On load, get gallery:
   useEffect(() => {
-    getStudent()
+    getGallery()
   }, [])
   //#endregion ⬆⬆ All state variables & app load above. 
 
-    return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Gallery of My Life</h1>
-        </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
-      </div>
-    );
-}
+  
+  //#region ⬇⬇ All CRUD routes below:
+  // ⬇ getGallery GET request, runs on page load:
+  const getGallery = () => {
+    console.log('In getGallery');
+    // ⬇ Axios GET to pull from DB:
+    axios.get('/gallery')
+      .then(response => {
+        console.log('In GET .then, response:', response.data);
+        // ⬇ Take data from response and assign to the gallery array:
+        setGalleryList(response.data);
+      }) // End .then
+      .catch(error => {
+        console.log('In GET .catch, error:', error);
+      }); // End .catch
+  } // End getGallery
+
+  
+  //#endregion ⬆⬆ All CRUD routes above. 
+
+
+  //#region ⬇⬇ All rendering below:
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1 className="App-title">Gallery of My Life</h1>
+      </header>
+      <p>Gallery goes here</p>
+      <img src="images/goat_small.jpg" />
+    </div>
+  ); // End return
+  //#endregion ⬆⬆ All rendering above. 
+} // End App
 
 export default App;
