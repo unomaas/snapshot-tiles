@@ -50,17 +50,19 @@ function GalleryItem({ image, getGallery }) {
               <img className="GalleryItem-image" src={image.url} />
             </div>
           ) : (
-            <div className="GalleryItem-description">
-              <br /> <br />
-              <h5>{image.title}</h5>
-              <br /> <br />
-              <p>{image.description}</p>
+            <div>
+              <div className="GalleryItem-description">
+                <h5>{image.title}</h5>
+                <br /> <br />
+                <p>{image.description}</p>
+              </div>
             </div>
           )}
         </div>
         <div className="GalleryItem-button-wrapper">
-          <button onClick={handleLike} className="GalleryItem-likes btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
-          <button className="GalleryItem-counter btn btn-light link-primary">This image has {image.likes} likes!</button>
+          <button onClick={handleLike} className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg" /></button>
+          <button className="GalleryItem-counter btn btn-light link-primary">{image.likes} Likes!</button>
+          <button className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg" /></button>
         </div>
       </div>
     </>
