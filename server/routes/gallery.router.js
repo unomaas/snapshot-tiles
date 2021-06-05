@@ -33,16 +33,35 @@ router.get('/', (req, res) => {
 /** ⬇ /gallery PUT functionality:
  * Router function to handle the POST part of the server-side logic.  Will send SQL query to add like to like counter and output to DOM. 
  */
-router.put('/like/:id', (req, res) => {
-  console.log(req.params);
-  const galleryId = req.params.id;
-  for (const galleryItem of galleryItems) {
-    if (galleryItem.id == galleryId) {
-      galleryItem.likes += 1;
-    }
-  }
-  res.sendStatus(200);
-}); // END PUT Route
+router.put('/:id', (req, res) => {
+  console.log('In /gallery router PUT');
+  // ⬇ Grabbing image id from the req params:
+  let imageId = req.params.id;
+  // ⬇ Declaring SQL commands to send to DB:
+  const sqlText = `UPDATE "gallery" SET "likes" = "likes" + 1 WHERE "id" = 1;`;
+  pool.query(sqlText)
+    .then(result => {
+      console.log('In /gallery PUT, result:', result.rows);
+      // ⬇ Sends back the results in an object, we always want rows:
+      res.send(result.rows)
+    }) // End .then
+    .catch(error => {
+      console.log('In /gallery PUT, error:', error);
+      res.sendStatus(500); // Server error. 
+    });
+})
+
+
+// router.put('/like/:id', (req, res) => {
+//   console.log(req.params);
+//   const galleryId = req.params.id;
+//   for (const galleryItem of galleryItems) {
+//     if (galleryItem.id == galleryId) {
+//       galleryItem.likes += 1;
+//     }
+//   }
+//   res.sendStatus(200);
+// }); // END PUT Route
 
 //#endregion ⬆⬆ All CRUD routes above. 
 

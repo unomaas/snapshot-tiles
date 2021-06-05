@@ -40,12 +40,12 @@ function GalleryItem({ image, getGallery }) {
     */
   const handleLike = () => {
     console.log('In handleLike, image:', image);
-    // ⬇ Packaging data to increment like value:
-    const likeToAdd = {
-      likes: likes++
-    }
+    // // ⬇ Packaging data to increment like value:
+    // const likeToAdd = {
+    //   likes: likes++
+    // }
     // ⬇ PUT, sending that data to the DB:
-    axios.put(`/gallery/${image.id}`, likeToAdd)
+    axios.put(`/gallery/${image.id}`)
       .then(response => {
         console.log('In /gallery PUT, response:', response);
         // ⬇ Refresh DOM with updated status:
@@ -76,8 +76,8 @@ function GalleryItem({ image, getGallery }) {
         )}
       </div>
       <div className="GalleryItem-button-wrapper">
-        <button className="GalleryItem-button btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
-        <button className="GalleryItem-likes btn btn-danger">This image has {image.likes} likes!</button>
+        <button onClick={handleLike} className="GalleryItem-button btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
+        <button className="GalleryItem-likes btn btn-light link-primary">This image has {image.likes} likes!</button>
       </div>
     </>
   ) // End return
