@@ -1,16 +1,19 @@
+//#region ⬇⬇ All document setup below:
 import './GalleryItem.css';
 import { useState } from 'react';
 import axios from 'axios';
+//#endregion ⬆⬆ All document setup above. 
+
 
 function GalleryItem({ image, getGallery }) {
-  //#region ⬇⬇ All state variables
+  //#region ⬇⬇ All state variables below:
   const [isHidden, setIsHidden] = useState(true);
   //#endregion ⬆⬆ All state variables above.
 
-  
+
   //#region ⬇⬇ All event handlers below:
   /** ⬇ handleHide functionality:
-    * When the user clicks on an image, handleHide will flip between showing the image and the title/description. 
+    * When the user clicks on an image, this will flip between showing the image and text. 
     */
   const handleHide = () => {
     console.log('In handleHide, image:', image);
@@ -20,7 +23,7 @@ function GalleryItem({ image, getGallery }) {
     const textToHide = {
       textHidden: !image.textHidden
     }
-    // ⬇ PUT, Sending that data to the DB:
+    // ⬇ PUT, sending that data to the DB:
     axios.put(`/gallery/${image.id}`, textToHide)
       .then(response => {
         console.log('In /gallery PUT, response:', response);
@@ -31,6 +34,27 @@ function GalleryItem({ image, getGallery }) {
         console.log('In /gallery PUT, error:', error);
       }); // End .catch
   } // End handleHide
+
+  /** ⬇ handleLike functionality:
+    * When the user clicks on an the like button, this will increment the like counter. 
+    */
+  const handleLike = () => {
+    console.log('In handleLike, image:', image);
+    // ⬇ Packaging data to increment like value:
+    const likeToAdd = {
+      likes: likes++
+    }
+    // ⬇ PUT, sending that data to the DB:
+    axios.put(`/gallery/${image.id}`, likeToAdd)
+      .then(response => {
+        console.log('In /gallery PUT, response:', response);
+        // ⬇ Refresh DOM with updated status:
+        getGallery();
+      }) // End .then
+      .catch(error => {
+        console.log('In /gallery PUT, error:', error);
+      }); // End .catch
+  } // End handleLike
   //#endregion ⬆⬆ All event handlers above.
 
 
@@ -59,5 +83,6 @@ function GalleryItem({ image, getGallery }) {
   ) // End return
   //#endregion ⬆⬆ All rendering above. 
 } // End GalleryItem
+
 
 export default GalleryItem;

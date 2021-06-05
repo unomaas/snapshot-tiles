@@ -1,7 +1,11 @@
+//#region ⬇⬇ All document setup below:
 import GalleryItem from '../GalleryItem/GalleryItem';
 import './GalleryList.css';
+//#endregion ⬆⬆ All document setup above. 
+
 
 function GalleryList({ galleryList, getGallery }) {
+  //#region ⬇⬇ All rendering below:
   return (
     <>
       <h3 className="App-GalleryList-Header">Gallery of My Life</h3>
@@ -15,7 +19,9 @@ function GalleryList({ galleryList, getGallery }) {
         })}
       </div>
     </>
-  )
+  ) // End return
+  //#endregion ⬆⬆ All rendering above. 
 } // End GalleryList
+
 
 export default GalleryList;

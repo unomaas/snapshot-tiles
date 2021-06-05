@@ -37,8 +37,6 @@ function App() {
         console.log('In GET .catch, error:', error);
       }); // End .catch
   } // End getGallery
-
-
   //#endregion ⬆⬆ All CRUD routes above. 
 
 
@@ -46,10 +44,12 @@ function App() {
   return (
     <div className="App">
       <Header />
+      {/* Array of gallery images displayed on the DOM, below: */}
       <GalleryList galleryList={galleryList} getGallery={getGallery} />
     </div>
   ); // End return
   //#endregion ⬆⬆ All rendering above. 
 } // End App
+
 
 export default App;
