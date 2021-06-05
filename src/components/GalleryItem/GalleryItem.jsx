@@ -40,11 +40,8 @@ function GalleryItem({ image, getGallery }) {
     */
   const handleLike = () => {
     console.log('In handleLike, image:', image);
-    // // ⬇ Packaging data to increment like value:
-    // const likeToAdd = {
-    //   likes: likes++
-    // }
-    // ⬇ PUT, sending that data to the DB:
+    console.log('In handleLike, image ID is:', image.id);
+    // ⬇ PUT, sending +Like command to DB:
     axios.put(`/gallery/${image.id}`)
       .then(response => {
         console.log('In /gallery PUT, response:', response);

@@ -38,8 +38,9 @@ router.put('/:id', (req, res) => {
   // ⬇ Grabbing image id from the req params:
   let imageId = req.params.id;
   // ⬇ Declaring SQL commands to send to DB:
-  const sqlText = `UPDATE "gallery" SET "likes" = "likes" + 1 WHERE "id" = 1;`;
-  pool.query(sqlText)
+  const sqlText = `UPDATE "gallery" SET "likes" = "likes" + 1 WHERE "id" = $1;`;
+  const values = [imageId];
+  pool.query(sqlText, values)
     .then(result => {
       console.log('In /gallery PUT, result:', result.rows);
       // ⬇ Sends back the results in an object, we always want rows:
@@ -48,20 +49,8 @@ router.put('/:id', (req, res) => {
     .catch(error => {
       console.log('In /gallery PUT, error:', error);
       res.sendStatus(500); // Server error. 
-    });
-})
-
-
-// router.put('/like/:id', (req, res) => {
-//   console.log(req.params);
-//   const galleryId = req.params.id;
-//   for (const galleryItem of galleryItems) {
-//     if (galleryItem.id == galleryId) {
-//       galleryItem.likes += 1;
-//     }
-//   }
-//   res.sendStatus(200);
-// }); // END PUT Route
+    }); // End .catch
+}) // End PUT
 
 //#endregion ⬆⬆ All CRUD routes above. 
 
