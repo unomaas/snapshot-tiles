@@ -53,6 +53,29 @@ router.put('/:id', (req, res) => {
       res.sendStatus(500); // Server error. 
     }); // End .catch
 }) // End PUT
+
+/** ⬇ /tasks DELETE functionality:
+ * Router function to handle the DELETE part of the server-side logic.  Will send SQL query to delete the entire row from the DB.  
+ */
+router.delete("/:id", (req, res) => {
+  console.log('In /gallery router DELETE');
+  // ⬇ Grabbing image id from the req params:
+  let imageId = req.params.id;
+  // ⬇ Declaring SQL commands & values to send to DB:
+  const sqlText = `DELETE FROM "gallery" WHERE "tasks".id = $1;`;
+  // ⬇ imageId (aka $1) value needs to be sent as an array:
+  const values = [imageId];
+  // ⬇ Sending the variables to the DB: 
+  pool.query(sqlText, values)
+    .then(response => {
+      console.log('Deleted the image with ID:', taskId);
+      res.sendStatus(202); // "Accepted"
+    }) // End .then
+    .catch(error => {
+      console.log('Unable to delete image, error:', error);
+      res.sendStatus(500);
+    }); // End .catch
+}) // End DELETE
 //#endregion ⬆⬆ All CRUD routes above. 
 
 
