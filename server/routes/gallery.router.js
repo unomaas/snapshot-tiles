@@ -25,12 +25,14 @@ router.get('/', (req, res) => {
       console.log('In /gallery GET, error:', error);
       res.sendStatus(500); // Server error. 
     }); // End .catch
-  // res.send(galleryItems);
+  res.send(galleryItems);
 }); // End GET
 
 /** ⬇ /tasks POST functionality:
  * Router function to handle the POST part of the server-side logic.  Will send SQL query to add a new image to the DB and output to DOM. 
  */
+
+// PUT Route
 router.put('/like/:id', (req, res) => {
   console.log(req.params);
   const galleryId = req.params.id;
