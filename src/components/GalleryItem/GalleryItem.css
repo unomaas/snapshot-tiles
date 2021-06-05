@@ -5,6 +5,7 @@
 .GalleryItem-description {
   padding: 30px;
   vertical-align: center;
+  background-color: white;
 }
 
 .GalleryItem-image, .GalleryItem-description {

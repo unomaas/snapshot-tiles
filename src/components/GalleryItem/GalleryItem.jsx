@@ -17,7 +17,7 @@ function GalleryItem({ image, getGallery }) {
     */
   const handleHide = () => {
     console.log('In handleHide, image:', image.title);
-    // ⬇ Flipping state variable value:
+    // ⬇ Flipping state variable value on click:
     setIsHidden(!isHidden);
   } // End handleHide
 
