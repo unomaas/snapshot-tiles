@@ -39,7 +39,9 @@ router.put('/:id', (req, res) => {
   let imageId = req.params.id;
   // ⬇ Declaring SQL commands & values to send to DB:
   const sqlText = `UPDATE "gallery" SET "likes" = "likes" + 1 WHERE "id" = $1;`;
+  // ⬇ imageId (aka $1) value needs to be sent as an array:
   const values = [imageId];
+  // ⬇ Sending the variables to the DB: 
   pool.query(sqlText, values)
     .then(result => {
       console.log('In /gallery PUT, result:', result.rows);
