@@ -19,9 +19,11 @@ function App() {
   }, [])
   //#endregion ⬆⬆ All state variables & app load above. 
 
-  
+
   //#region ⬇⬇ All CRUD routes below:
-  // ⬇ getGallery GET request, runs on page load:
+  /** ⬇ getGallery functionality:
+   * Makes a GET request to pull all images from DB and feed to the GalleryList array. Runs on page load.
+   */
   const getGallery = () => {
     console.log('In getGallery');
     // ⬇ Axios GET to pull from DB:
@@ -36,7 +38,7 @@ function App() {
       }); // End .catch
   } // End getGallery
 
-  
+
   //#endregion ⬆⬆ All CRUD routes above. 
 
 
@@ -45,8 +47,6 @@ function App() {
     <div className="App">
       <Header />
       <GalleryList galleryList={galleryList} getGallery={getGallery} />
-      {/* <p>Gallery goes here.</p>
-      <img src="images/goat_small.jpg" /> */}
     </div>
   ); // End return
   //#endregion ⬆⬆ All rendering above. 

@@ -30,7 +30,9 @@ router.get('/', (req, res) => {
  * Router function to handle the POST part of the server-side logic.  Will send SQL query to add a new image to the DB and output to DOM. 
  */
 
-// PUT Route
+/** ⬇ /gallery PUT functionality:
+ * Router function to handle the POST part of the server-side logic.  Will send SQL query to add like to like counter and output to DOM. 
+ */
 router.put('/like/:id', (req, res) => {
   console.log(req.params);
   const galleryId = req.params.id;
@@ -41,6 +43,7 @@ router.put('/like/:id', (req, res) => {
   }
   res.sendStatus(200);
 }); // END PUT Route
+
 //#endregion ⬆⬆ All CRUD routes above. 
 
 
