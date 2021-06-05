@@ -5,7 +5,7 @@ function Header() {
     <>
       <div className="App-header">
         <span>
-          <h1 className="App-header-title">Gallery of My Life App</h1>
+          <h1 className="App-header-title">Gallery App</h1>
           <h3 className="App-header-subtitle"> v1.0</h3>
         </span>
       </div>

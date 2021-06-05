@@ -1,0 +1,7 @@
+.App-GalleryList-Header {
+  font-size: 2.5em;
+}
+
+.App-GalleryList-Display{
+  display: flex;
+}
