@@ -11,6 +11,9 @@ function GalleryList({ galleryList, getGallery }) {
         {/* ⬇ Loops through and iterates each image from the gallery to the DOM: */}
         {galleryList.map(image => {
           console.log('In GalleryList .map, image:', image);
+          return (
+            <GalleryItem getGallery={getGallery} key={image.id} image={image} />
+          )
         })}
       </div>
     </>
