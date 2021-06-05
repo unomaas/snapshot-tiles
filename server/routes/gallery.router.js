@@ -37,7 +37,7 @@ router.put('/:id', (req, res) => {
   console.log('In /gallery router PUT');
   // ⬇ Grabbing image id from the req params:
   let imageId = req.params.id;
-  // ⬇ Declaring SQL commands to send to DB:
+  // ⬇ Declaring SQL commands & values to send to DB:
   const sqlText = `UPDATE "gallery" SET "likes" = "likes" + 1 WHERE "id" = $1;`;
   const values = [imageId];
   pool.query(sqlText, values)
@@ -51,7 +51,6 @@ router.put('/:id', (req, res) => {
       res.sendStatus(500); // Server error. 
     }); // End .catch
 }) // End PUT
-
 //#endregion ⬆⬆ All CRUD routes above. 
 
 

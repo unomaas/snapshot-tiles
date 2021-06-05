@@ -16,7 +16,7 @@ function GalleryItem({ image, getGallery }) {
     * When the user clicks on an image, this will flip between showing the image and text. 
     */
   const handleHide = () => {
-    console.log('In handleHide, image:', image);
+    console.log('In handleHide, image:', image.title);
     // ⬇ Flipping state variable value:
     setIsHidden(!isHidden);
     // ⬇ Packaging data to flip textHidden value:
@@ -39,12 +39,11 @@ function GalleryItem({ image, getGallery }) {
     * When the user clicks on an the like button, this will increment the like counter. 
     */
   const handleLike = () => {
-    console.log('In handleLike, image:', image);
-    console.log('In handleLike, image ID is:', image.id);
+    console.log('In handleLike, image:', image.title);
     // ⬇ PUT, sending +Like command to DB:
     axios.put(`/gallery/${image.id}`)
       .then(response => {
-        console.log('In /gallery PUT, response:', response);
+        console.log('In /gallery PUT, response:', response.data);
         // ⬇ Refresh DOM with updated status:
         getGallery();
       }) // End .then
