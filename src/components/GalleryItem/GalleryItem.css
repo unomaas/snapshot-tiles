@@ -1,6 +1,3 @@
-/* .GalleryItem {
-} */
-
 
 .GalleryItem-description {
   padding: 30px;
@@ -12,6 +9,7 @@
   border: 1px solid black;
   height: 500px;
   width: 500px;
+  border-radius: 10px;
 }
 
 .GalleryItem-button, .GalleryItem-likes {
@@ -23,6 +21,7 @@
   text-align: center;
 }
 
-/* .GalleryItem-likes {
-  color: white;
-} */
+
+.GalleryItem-image-wrapper {
+  width: 500px;
+}

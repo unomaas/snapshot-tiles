@@ -43,24 +43,25 @@ function GalleryItem({ image, getGallery }) {
   //#region ⬇⬇ All rendering below:
   return (
     <>
-      <div onClick={handleHide}>
-        {isHidden ? (
-          <div className="GalleryItem">
-            <img className="GalleryItem-image" src={image.url} />
-          </div>
-        ) : (
-          <div className="GalleryItem-description">
-            <br /> <br />
-            <h5>{image.title}</h5>
-            <br /> <br />
-            <p>{image.description}</p>
-          </div>
-        )}
-      </div>
-
-      <div className="GalleryItem-button-wrapper">
-        <button onClick={handleLike} className="GalleryItem-button btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
-        <button className="GalleryItem-likes btn btn-light link-primary">This image has {image.likes} likes!</button>
+      <div className="GalleryItem-image-wrapper">
+        <div onClick={handleHide}>
+          {isHidden ? (
+            <div>
+              <img className="GalleryItem-image" src={image.url} />
+            </div>
+          ) : (
+            <div className="GalleryItem-description">
+              <br /> <br />
+              <h5>{image.title}</h5>
+              <br /> <br />
+              <p>{image.description}</p>
+            </div>
+          )}
+        </div>
+        <div className="GalleryItem-button-wrapper">
+          <button onClick={handleLike} className="GalleryItem-button btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
+          <button className="GalleryItem-likes btn btn-light link-primary">This image has {image.likes} likes!</button>
+        </div>
       </div>
     </>
   ) // End return

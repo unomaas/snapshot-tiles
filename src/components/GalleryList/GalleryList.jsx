@@ -8,11 +8,11 @@ function GalleryList({ galleryList, getGallery }) {
   //#region ⬇⬇ All rendering below:
   return (
     <>
-      <h3 className="App-GalleryList-Header">Gallery of My Life</h3>
-      <div className="App-GalleryList-Display">
+      <h3 className="App-GalleryList-Header">Snapshots from My Life</h3>
+      <div className="App-GalleryList-Display"><br />
         {/* ⬇ Loops through and iterates each image from the gallery to the DOM: */}
         {galleryList.map(image => {
-          // console.log('In GalleryList .map, image:', image);
+          console.log('In GalleryList .map, image:', image.title);
           return (
             <GalleryItem getGallery={getGallery} key={image.id} image={image} />
           )
