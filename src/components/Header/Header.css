@@ -1,18 +1,17 @@
 .App-header {
-  background-color: #222;
+  background-color: #1266F1;
   padding: 1em;
   color: white;
-  margin-bottom: 1em;
   text-align: left;
 
 }
 
 .App-header-title {
-  font-size: 1.5em;
+  font-size: 1.25em;
 }
 
 .App-header-subtitle {
-  font-size: .75em;
+  font-size: .85em;
 }
 
 .App-header-title, .App-header-subtitle {

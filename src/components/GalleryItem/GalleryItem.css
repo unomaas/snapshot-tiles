@@ -12,16 +12,17 @@
   border-radius: 10px;
 }
 
-.GalleryItem-button, .GalleryItem-likes {
+.GalleryItem-likes, .GalleryItem-counter {
   width: 49.25%;
-  margin: 2px 1px 1.5em 1px;
+  margin: 2px 1px 1em 1px;
 }
 
 .GalleryItem-button-wrapper {
   text-align: center;
 }
 
-
-.GalleryItem-image-wrapper {
+.GalleryItem-wrapper {
   width: 500px;
+  display: inline-block;
+  margin: 10px;
 }

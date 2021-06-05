@@ -43,7 +43,7 @@ function GalleryItem({ image, getGallery }) {
   //#region ⬇⬇ All rendering below:
   return (
     <>
-      <div className="GalleryItem-image-wrapper">
+      <div className="GalleryItem-wrapper">
         <div onClick={handleHide}>
           {isHidden ? (
             <div>
@@ -59,8 +59,8 @@ function GalleryItem({ image, getGallery }) {
           )}
         </div>
         <div className="GalleryItem-button-wrapper">
-          <button onClick={handleLike} className="GalleryItem-button btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
-          <button className="GalleryItem-likes btn btn-light link-primary">This image has {image.likes} likes!</button>
+          <button onClick={handleLike} className="GalleryItem-likes btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
+          <button className="GalleryItem-counter btn btn-light link-primary">This image has {image.likes} likes!</button>
         </div>
       </div>
     </>
