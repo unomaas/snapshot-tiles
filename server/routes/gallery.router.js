@@ -62,13 +62,13 @@ router.delete("/:id", (req, res) => {
   // ⬇ Grabbing image id from the req params:
   let imageId = req.params.id;
   // ⬇ Declaring SQL commands & values to send to DB:
-  const sqlText = `DELETE FROM "gallery" WHERE "tasks".id = $1;`;
+  const sqlText = `DELETE FROM "gallery" WHERE "id" = $1;`;
   // ⬇ imageId (aka $1) value needs to be sent as an array:
   const values = [imageId];
   // ⬇ Sending the variables to the DB: 
-  pool.query(sqlText, values)
+  pool.query(sqlText, values) 
     .then(response => {
-      console.log('Deleted the image with ID:', taskId);
+      console.log('Deleted the image with ID:', imageId);
       res.sendStatus(202); // "Accepted"
     }) // End .then
     .catch(error => {

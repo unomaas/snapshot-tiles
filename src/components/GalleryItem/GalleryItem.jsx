@@ -26,7 +26,7 @@ function GalleryItem({ image, getGallery }) {
     */
   const handleLike = () => {
     console.log('In handleLike, image:', image.title);
-    // ⬇ PUT, sending +Like command to DB:
+    // ⬇ PUT, sending +Like request to server:
     axios.put(`/gallery/${image.id}`)
       .then(response => {
         console.log('In handleLike PUT, response:', response.data);
@@ -34,9 +34,26 @@ function GalleryItem({ image, getGallery }) {
         getGallery();
       }) // End .then
       .catch(error => {
-        console.log('In /gallery PUT, error:', error);
+        console.log('In handleLike PUT, error:', error);
       }); // End .catch
   } // End handleLike
+
+  /** ⬇ handleDelete functionality:
+    * When the user clicks on an the trash button, this will delete the image. 
+    */
+  const handleDelete = () => {
+    console.log('In handleDelete, image:', image.title);
+    // ⬇ DELETE, sending delete request to server:
+    axios.delete(`/gallery/${image.id}`)
+      .then(response => {
+        console.log('In handleDelete DELETE, response:', response.data);
+        // ⬇ Refresh DOM with updated status:
+        getGallery();
+      }) // End .then
+      .catch(error => {
+        console.log('In handleDelete DELETE, error:', error);
+      }); // End .catch
+  } // End handleDelete
   //#endregion ⬆⬆ All event handlers above.
 
 
@@ -62,7 +79,7 @@ function GalleryItem({ image, getGallery }) {
         <div className="GalleryItem-button-wrapper">
           <button onClick={handleLike} className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg" /></button>
           <button className="GalleryItem-counter btn btn-light link-primary">{image.likes} Likes!</button>
-          <button className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg" /></button>
+          <button onClick={handleDelete} className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg" /></button>
         </div>
       </div>
     </>
