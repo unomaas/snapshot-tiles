@@ -1,7 +1,6 @@
 //#region ⬇⬇ All document setup below:
 const express = require('express');
 const router = express.Router();
-const galleryItems = require('../modules/gallery.data');
 const pool = require('../modules/pool.js');
 //#endregion ⬆⬆ All document setup above. 
 
@@ -25,7 +24,6 @@ router.get('/', (req, res) => {
       console.log('In /gallery GET, error:', error);
       res.sendStatus(500); // Server error. 
     }); // End .catch
-  res.send(galleryItems);
 }); // End GET
 
 /** ⬇ /tasks POST functionality:
