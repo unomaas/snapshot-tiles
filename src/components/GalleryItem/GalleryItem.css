@@ -1,6 +1,18 @@
-.imageItem {
+/* .GalleryItem {
+} */
+
+
+.GalleryItem-description {
+  padding: 10px;
+}
+
+.GalleryItem-image, .GalleryItem-description {
   border: 1px solid black;
-  height: 400px;
-  width: 400px;
-  flex: auto;
+  height: 500px;
+  width: 500px;
+}
+
+.GalleryItem-button {
+  width: 100%;
+  margin-bottom: 1em;
 }

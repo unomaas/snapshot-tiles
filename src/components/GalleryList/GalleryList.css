@@ -3,5 +3,5 @@
 }
 
 .App-GalleryList-Display{
-  display: flex;
+  display: inline-block;
 }
