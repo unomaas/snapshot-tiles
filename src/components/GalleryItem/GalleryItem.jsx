@@ -19,20 +19,6 @@ function GalleryItem({ image, getGallery }) {
     console.log('In handleHide, image:', image.title);
     // ⬇ Flipping state variable value:
     setIsHidden(!isHidden);
-    // ⬇ Packaging data to flip textHidden value:
-    const textToHide = {
-      textHidden: !image.textHidden
-    }
-    // ⬇ PUT, sending that data to the DB:
-    axios.put(`/gallery/${image.id}`, textToHide)
-      .then(response => {
-        console.log('In /gallery PUT, response:', response);
-        // ⬇ Refresh DOM with updated status:
-        getGallery();
-      }) // End .then
-      .catch(error => {
-        console.log('In /gallery PUT, error:', error);
-      }); // End .catch
   } // End handleHide
 
   /** ⬇ handleLike functionality:
@@ -43,7 +29,7 @@ function GalleryItem({ image, getGallery }) {
     // ⬇ PUT, sending +Like command to DB:
     axios.put(`/gallery/${image.id}`)
       .then(response => {
-        console.log('In /gallery PUT, response:', response.data);
+        console.log('In handleLike PUT, response:', response.data);
         // ⬇ Refresh DOM with updated status:
         getGallery();
       }) // End .then
@@ -71,6 +57,7 @@ function GalleryItem({ image, getGallery }) {
           </div>
         )}
       </div>
+
       <div className="GalleryItem-button-wrapper">
         <button onClick={handleLike} className="GalleryItem-button btn btn-primary">Click here to like! <img src="images/thumbsUp.svg" /></button>
         <button className="GalleryItem-likes btn btn-light link-primary">This image has {image.likes} likes!</button>
