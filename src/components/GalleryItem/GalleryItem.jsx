@@ -8,6 +8,7 @@ function GalleryItem({image, getGallery}) {
 
   const handleHide = () => {
     console.log('In handleHide, image:', image);
+    setIsHidden(!isHidden);
     // ⬇ Packaging data to flip textHidden value:
     const textToHide = {
       textHidden: !image.textHidden
@@ -26,7 +27,7 @@ function GalleryItem({image, getGallery}) {
 
 
   return (
-    <div className="imageItem">
+    <div className="imageItem" onClick={handleHide}>
       {isHidden ? (
         <div>
           <img src={image.url} />
