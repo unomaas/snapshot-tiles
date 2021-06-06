@@ -77,9 +77,19 @@ function GalleryItem({ image, getGallery }) {
           )}
         </div>
         <div className="GalleryItem-button-wrapper">
-          <button onClick={handleLike} className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg" /></button>
-          <button className="GalleryItem-counter btn btn-light link-primary">{image.likes} Likes!</button>
-          <button onClick={handleDelete} className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg" /></button>
+          <button 
+            className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg" 
+            onClick={handleLike} 
+            />
+          </button>
+          <button 
+            className="GalleryItem-counter btn btn-light link-primary">{image.likes} Likes!
+          </button>
+          <button 
+            className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg" 
+            onClick={handleDelete} 
+            />
+          </button>
         </div>
       </div>
     </>
