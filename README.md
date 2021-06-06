@@ -23,9 +23,6 @@ Bootstrap: https://getbootstrap.com/
 PostgreSQL: https://www.postgresql.org/
 
 
-
-
-
 ## Installation
 
 To run this program, you will need to:
