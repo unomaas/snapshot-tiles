@@ -86,7 +86,7 @@ function GalleryItem({ image, getGallery }) {
         <div className="GalleryItem-button-wrapper">
           <button
             onClick={handleLike}
-            className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg"
+            className="GalleryItem-likes btn btn-primary">Click to Like! <img src="images/thumbsUp.svg"
             />
           </button>
           <button

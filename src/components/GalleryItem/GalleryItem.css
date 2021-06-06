@@ -8,8 +8,8 @@
 
 .GalleryItem-image, .GalleryItem-description {
   border: 1px solid black;
-  height: 500px;
-  width: 500px;
+  height: 400px;
+  width: 400px;
   border-radius: 10px;
 }
 
@@ -22,18 +22,15 @@
 }
 
 .GalleryItem-wrapper {
-  width: 500px;
+  width: 400px;
   display: inline-block;
   margin: 10px;
 }
 
 .GalleryItem-likes {
-  width: 59.25%;
+  width: 52%;
 }
 
 .GalleryItem-counter {
-  width: 30%;
+  width: 35%;
 }
-
-/* .GalleryItem-delete {
-} */
