@@ -1,4 +1,4 @@
-# T2W10HW - Ryan's React Gallery App
+## T2W10HW - Ryan's React Gallery App
 
 Thanks for looking into my weekend project, the React gallery web app! 
 
@@ -23,9 +23,7 @@ Bootstrap: https://getbootstrap.com/
 PostgreSQL: https://www.postgresql.org/
 
 
-## Built With
 
-JavaScript/HTML/CSS, jQuery, React, Node, Bootstrap, Axios, PG. 
 
 
 ## Installation
@@ -36,7 +34,7 @@ To run this program, you will need to:
 [] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
 
 
-### Usage
+## Usage
 
 #1. To use this app, start the server in your terminal.  Navigate to http://localhost:3000/ in your browser.  
 
@@ -53,6 +51,10 @@ To run this program, you will need to:
 I'd like to give thanks to Dane Smith, Chad Smith (no relation), Kris Szafranski, and everyone in Pod 4 for helping me get through this week at Prime Digital Academy!  I wouldn't be here today without them.  
 
 
-#### Support
+### Built With
+
+JavaScript/HTML/CSS, jQuery, React, Node, Bootstrap, Axios, PG. 
+
+### Support
 
 If you have suggestions or issues, please email me at rdmjobs@live.com.  Thanks for reviewing my project!  Stay wonderful. <3
