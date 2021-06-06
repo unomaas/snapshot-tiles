@@ -39,20 +39,24 @@ function GalleryItem({ image, getGallery }) {
   } // End handleLike
 
   /** ⬇ handleDelete functionality:
-    * When the user clicks on an the trash button, this will delete the image. 
+    * When the user clicks on an the trash button, a pop-up will ask them to confirm deletion, then will delete the image. 
     */
   const handleDelete = () => {
     console.log('In handleDelete, image:', image.title);
-    // ⬇ DELETE, sending delete request to server:
-    axios.delete(`/gallery/${image.id}`)
-      .then(response => {
-        console.log('In handleDelete DELETE, response:', response.data);
-        // ⬇ Refresh DOM with updated status:
-        getGallery();
-      }) // End .then
-      .catch(error => {
-        console.log('In handleDelete DELETE, error:', error);
-      }); // End .catch
+    // ⬇ Adding a delete confirmation pop-up window before deleting:
+    const confirmBox = window.confirm("Do you really want to delete this image from Ryan's gallery?  Warning: This cannot be undone, and he might think you're un-cool.");
+    if (confirmBox === true) {
+      // ⬇ DELETE, sending delete request to server:
+      axios.delete(`/gallery/${image.id}`)
+        .then(response => {
+          console.log('In handleDelete DELETE, response:', response.data);
+          // ⬇ Refresh DOM with updated status:
+          getGallery();
+        }) // End .then
+        .catch(error => {
+          console.log('In handleDelete DELETE, error:', error);
+        }); // End .catch
+    }
   } // End handleDelete
   //#endregion ⬆⬆ All event handlers above.
 
@@ -77,17 +81,17 @@ function GalleryItem({ image, getGallery }) {
           )}
         </div>
         <div className="GalleryItem-button-wrapper">
-          <button 
-            className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg" 
-            onClick={handleLike} 
+          <button
+            onClick={handleLike}
+            className="GalleryItem-likes btn btn-primary">Click here to Like! <img src="images/thumbsUp.svg"
             />
           </button>
-          <button 
+          <button
             className="GalleryItem-counter btn btn-light link-primary">{image.likes} Likes!
           </button>
-          <button 
-            className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg" 
-            onClick={handleDelete} 
+          <button
+            onClick={handleDelete}
+            className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg"
             />
           </button>
         </div>
