@@ -44,7 +44,10 @@ function GalleryItem({ image, getGallery }) {
   const handleDelete = () => {
     console.log('In handleDelete, image:', image.title);
     // ⬇ Adding a delete confirmation pop-up window before deleting:
-    const confirmBox = window.confirm("Do you really want to delete this image from Ryan's gallery?  Warning: This cannot be undone, and he might think you're un-cool.");
+    const confirmBox = window.confirm(
+      "Do you really want to delete this image from Ryan's gallery?  Warning: This cannot be undone, and he might think you're un-cool."
+    );
+    // ⬇ If they confirm, process delete: : 
     if (confirmBox === true) {
       // ⬇ DELETE, sending delete request to server:
       axios.delete(`/gallery/${image.id}`)
@@ -56,7 +59,7 @@ function GalleryItem({ image, getGallery }) {
         .catch(error => {
           console.log('In handleDelete DELETE, error:', error);
         }); // End .catch
-    }
+    } // End if statement
   } // End handleDelete
   //#endregion ⬆⬆ All event handlers above.
 
