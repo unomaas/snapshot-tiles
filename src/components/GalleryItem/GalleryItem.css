@@ -3,6 +3,7 @@
   padding: 30px;
   vertical-align: center;
   background-color: white;
+  padding-top: 5em;
 }
 
 .GalleryItem-image, .GalleryItem-description {
@@ -12,9 +13,8 @@
   border-radius: 10px;
 }
 
-.GalleryItem-likes, .GalleryItem-counter {
-  width: 49.25%;
-  margin: 2px 1px 1em 1px;
+.GalleryItem-likes, .GalleryItem-counter, .GalleryItem-delete {
+  margin: 3px 1px 1em 1px;
 }
 
 .GalleryItem-button-wrapper {
@@ -26,3 +26,14 @@
   display: inline-block;
   margin: 10px;
 }
+
+.GalleryItem-likes {
+  width: 59%;
+}
+
+.GalleryItem-counter {
+  width: 30%;
+}
+
+/* .GalleryItem-delete {
+} */
