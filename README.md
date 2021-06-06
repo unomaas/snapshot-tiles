@@ -7,8 +7,6 @@ Thanks for looking into my weekend project, the React gallery web app!
 
 Duration: 3 Day Sprint
 
-This is a web based application that interacts with a virtual server and database to run a simple "To Do List" tracker.  The goal of this project was to get more hands on experience building an app that uses all CRUD functionality with a server and database running. 
-
 This is a web based application that uses React to interact with a virtual server and database.  The objective was to get hands-on experience working with React to build a full-stack app using CRUD methodology.  
 
 The app functionality will display tile images that, when clicked, would hide the image to show a text description.  There's also functionality for a Like button, a Like counter, and a Delete button.
