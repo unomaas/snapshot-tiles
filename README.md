@@ -13,7 +13,7 @@ The app functionality will display tile images that, when clicked, would hide th
 
 I opted not to add a form to add new images, so that I can upload this app to a web server and send it to friends/family as a progress tracker (without them changing it up too much).
 
-One note I'm really proud of: this app is dyslexia-friendly!  I added a custom font, "OpenDyslexia", to the server.  My mom suffers from dyslexia, and since she lives in a different state, I wanted to send this to her as a progress update without complications. <3
+One note I'm really proud of: this app is dyslexia accessible!  I added a custom font, "OpenDyslexia", to the server.  My mom suffers from dyslexia, and since she lives in a different state, I wanted to send this to her as a progress update without complications. <3
 
 
 ## Prerequisites
@@ -31,9 +31,9 @@ JavaScript/HTML/CSS, jQuery, React, Node, Bootstrap, Axios, PG.
 ## Installation
 
 To run this program, you will need to:
--- [] Build the database in your SQL server with the code in "database.sql" file. 
--- [] Run 'npm install' in your terminal to install the dependencies.
--- [] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
+[] Build the database in your SQL server with the code in "database.sql" file. 
+[] Run 'npm install' in your terminal to install the dependencies.
+[] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
 
 
 ### Usage
