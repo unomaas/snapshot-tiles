@@ -4,6 +4,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from '../Header/Header';
+import Footer from '../Footer/Footer';
 import GalleryList from '../GalleryList/GalleryList';
 //#endregion ⬆⬆ All document setup above. 
 
@@ -46,6 +47,7 @@ function App() {
       <Header />
       {/* Array of gallery images displayed on the DOM, below: */}
       <GalleryList galleryList={galleryList} getGallery={getGallery} />
+      <Footer />
     </div>
   ); // End return
   //#endregion ⬆⬆ All rendering above. 

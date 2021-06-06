@@ -1,0 +1,11 @@
+.Footer {
+  background-color: #B3E5FC;
+  padding: .5em;
+  color: #01579B;
+  text-align: right;
+}
+
+p {
+  display: inline;
+  font-size: 1em;
+}
