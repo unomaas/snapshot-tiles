@@ -6,6 +6,7 @@ import axios from 'axios';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import GalleryList from '../GalleryList/GalleryList';
+import './opendyslexic-regular-webfont.woff';
 //#endregion ⬆⬆ All document setup above. 
 
 
