@@ -47,7 +47,7 @@ function GalleryItem({ image, getGallery }) {
     const confirmBox = window.confirm(
       "Do you really want to delete this image from Ryan's gallery?  Warning: This cannot be undone, and he might think you're un-cool."
     );
-    // ⬇ If they confirm, process delete: : 
+    // ⬇ If they confirm, process delete:
     if (confirmBox === true) {
       // ⬇ DELETE, sending delete request to server:
       axios.delete(`/gallery/${image.id}`)
@@ -68,6 +68,7 @@ function GalleryItem({ image, getGallery }) {
   return (
     <>
       <div className="GalleryItem-wrapper">
+
         <div onClick={handleHide}>
           {isHidden ? (
             <div>
@@ -83,21 +84,24 @@ function GalleryItem({ image, getGallery }) {
             </div>
           )}
         </div>
+
         <div className="GalleryItem-button-wrapper">
           <button
             onClick={handleLike}
-            className="GalleryItem-likes btn btn-primary">Click to Like! <img src="images/thumbsUp.svg"
-            />
+            className="GalleryItem-likes btn btn-primary">
+            Click to Like! <img src="images/thumbsUp.svg"/>
           </button>
           <button
-            className="GalleryItem-counter btn btn-light link-primary">{image.likes} Likes!
+            className="GalleryItem-counter btn btn-light link-primary">
+            {image.likes} Likes!
           </button>
           <button
             onClick={handleDelete}
-            className="GalleryItem-delete btn btn-danger"><img src="images/trash.svg"
-            />
+            className="GalleryItem-delete btn btn-danger">
+            <img src="images/trash.svg"/>
           </button>
         </div>
+
       </div>
     </>
   ) // End return
