@@ -1,8 +1,0 @@
-/* File: font.css */
-@font-face {
-  font-family: 'opendyslexic';
-  src: local('opendyslexic'),
-       url('../fonts/OpenDyslexiaWebFontKit/opendyslexic-regular-webfont.woff') format('woff'),
-       url('../fonts/OpenDyslexiaWebFontKit/opendyslexic-regular-webfont.woff2') format('woff');
-}
-

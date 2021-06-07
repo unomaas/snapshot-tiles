@@ -7,6 +7,7 @@ import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import GalleryList from '../GalleryList/GalleryList';
 import './opendyslexic-regular-webfont.woff';
+import './opendyslexic-regular-webfont.woff2';
 //#endregion ⬆⬆ All document setup above. 
 
 
