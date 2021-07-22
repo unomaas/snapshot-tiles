@@ -3,6 +3,7 @@
 Thanks for looking into my weekend project, the React gallery web app! 
 
 
+
 # Description
 
 Duration: 3 Day Sprint
@@ -16,6 +17,7 @@ I opted not to add a form to add new images, so that I can upload this app to a 
 One note I'm really proud of: this app is dyslexia accessible!  I added a custom font, "OpenDyslexia", to the server.  My mom suffers from dyslexia, and since she lives in a different state, I wanted to send this to her as a progress update without complications. <3
 
 
+
 ## Prerequisites
 
 Node.js: https://nodejs.org/en/
@@ -23,12 +25,17 @@ Bootstrap: https://getbootstrap.com/
 PostgreSQL: https://www.postgresql.org/
 
 
+
 ## Installation
 
 To run this program, you will need to:
+
 [] Build the database in your SQL server with the code in "database.sql" file. 
+
 [] Run 'npm install' in your terminal to install the dependencies.
+
 [] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
+
 
 
 ## Usage
@@ -36,11 +43,15 @@ To run this program, you will need to:
 #1. To use this app, start the server in your terminal.  Navigate to http://localhost:3000/ in your browser.  
 
 #2. It's auto-populated with images and descriptions from my life (thanks for looking!):
+
   a. Click an image to flip between displaying the image and the text description.
+
   b. Press the "Click to Like" button to increment the Like counter.
+
   c. Press the red trash icon to delete an image (with a delete confirmation pop-up).
 
 #3. The images, text, and likes will persist through page refreshes and server restarts.  
+
 
 
 ### Acknowledgement
@@ -48,9 +59,12 @@ To run this program, you will need to:
 I'd like to give thanks to Dane Smith, Chad Smith (no relation), Kris Szafranski, and everyone in Pod 4 for helping me get through this week at Prime Digital Academy!  I wouldn't be here today without them.  
 
 
+
 ### Built With
 
 JavaScript/HTML/CSS, jQuery, React, Node, Bootstrap, Axios, PG. 
+
+
 
 ### Support
 
