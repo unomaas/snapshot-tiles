@@ -44,11 +44,11 @@ To run this program, you will need to:
 
 #2. It's auto-populated with images and descriptions from my life (thanks for looking!):
 
-  a. Click an image to flip between displaying the image and the text description.
+  -- a. Click an image to flip between displaying the image and the text description.
 
-  b. Press the "Click to Like" button to increment the Like counter.
+  -- b. Press the "Click to Like" button to increment the Like counter.
 
-  c. Press the red trash icon to delete an image (with a delete confirmation pop-up).
+  -- c. Press the red trash icon to delete an image (with a delete confirmation pop-up).
 
 #3. The images, text, and likes will persist through page refreshes and server restarts.  
 
