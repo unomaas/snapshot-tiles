@@ -21,7 +21,9 @@ One note I'm really proud of: this app is dyslexia accessible!  I added a custom
 ## Prerequisites
 
 Node.js: https://nodejs.org/en/
+
 Bootstrap: https://getbootstrap.com/ 
+
 PostgreSQL: https://www.postgresql.org/
 
 
