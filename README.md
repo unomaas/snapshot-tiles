@@ -55,17 +55,21 @@ To run this program, you will need to:
 - #3. The images, text, and likes will persist through page refreshes and server restarts.  
 
 
+### Accessibility:
 
-### Acknowledgement:
+I strive to make my apps accessible to all!
 
-I'd like to give thanks to Dane Smith, Chad Smith (no relation), Kris Szafranski, and everyone in Pod 4 for helping me get through this week at Prime Digital Academy!  I wouldn't be here today without them.  
-
+This specific app is dyslexia-friendly, with a custom font, "OpenDyslexia", added to the server.
 
 
 ### Built With:
 
 JavaScript/HTML/CSS, jQuery, React, Node, Bootstrap, Axios, PG. 
 
+
+### Acknowledgement:
+
+I'd like to give thanks to Dane Smith, Chad Smith (no relation), Kris Szafranski, and everyone in Pod 4 for helping me get through this week at Prime Digital Academy!  I wouldn't be here today without them.  
 
 
 ### Support:
