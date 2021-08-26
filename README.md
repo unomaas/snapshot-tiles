@@ -1,12 +1,12 @@
-## T2W10HW - Ryan's React Gallery App
+# React Gallery App
 
 Thanks for looking into my weekend project, the React gallery web app! 
 
 
 
-# Description
+## Description:
 
-Duration: 3 Day Sprint
+Duration: Weekend Sprint
 
 This is a web based application that uses React to interact with a virtual server and database.  The objective was to get hands-on experience working with React to build a full-stack app using CRUD methodology.  
 
@@ -18,56 +18,56 @@ One note I'm really proud of: this app is dyslexia accessible!  I added a custom
 
 
 
-## Prerequisites
+## Prerequisites:
 
-Node.js: https://nodejs.org/en/
+- Node.js: https://nodejs.org/en/
 
-Bootstrap: https://getbootstrap.com/ 
+- Bootstrap: https://getbootstrap.com/ 
 
-PostgreSQL: https://www.postgresql.org/
+- PostgreSQL: https://www.postgresql.org/
 
 
 
-## Installation
+## Installation:
 
 To run this program, you will need to:
 
-[] Build the database in your SQL server with the code in "database.sql" file. 
+- [] Build the database in your SQL server with the code in "database.sql" file. 
 
-[] Run 'npm install' in your terminal to install the dependencies.
+- [] Run 'npm install' in your terminal to install the dependencies.
 
-[] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
-
-
-
-## Usage
-
-#1. To use this app, start the server in your terminal.  Navigate to http://localhost:3000/ in your browser.  
-
-#2. It's auto-populated with images and descriptions from my life (thanks for looking!):
-
-  -- a. Click an image to flip between displaying the image and the text description.
-
-  -- b. Press the "Click to Like" button to increment the Like counter.
-
-  -- c. Press the red trash icon to delete an image (with a delete confirmation pop-up).
-
-#3. The images, text, and likes will persist through page refreshes and server restarts.  
+- [] Run 'npm run server' in one terminal, and 'npm run client' in another terminal.
 
 
 
-### Acknowledgement
+## Usage:
+
+- #1. To use this app, start the server in your terminal.  Navigate to http://localhost:3000/ in your browser.  
+
+- #2. It's auto-populated with images and descriptions from my life (thanks for looking!):
+
+  - a. Click an image to flip between displaying the image and the text description.
+
+  - b. Press the "Click to Like" button to increment the Like counter.
+
+  - c. Press the red trash icon to delete an image (with a delete confirmation pop-up).
+
+- #3. The images, text, and likes will persist through page refreshes and server restarts.  
+
+
+
+### Acknowledgement:
 
 I'd like to give thanks to Dane Smith, Chad Smith (no relation), Kris Szafranski, and everyone in Pod 4 for helping me get through this week at Prime Digital Academy!  I wouldn't be here today without them.  
 
 
 
-### Built With
+### Built With:
 
 JavaScript/HTML/CSS, jQuery, React, Node, Bootstrap, Axios, PG. 
 
 
 
-### Support
+### Support:
 
 If you have suggestions or issues, please email me at rdmjobs@live.com.  Thanks for reviewing my project!  Stay wonderful. <3
